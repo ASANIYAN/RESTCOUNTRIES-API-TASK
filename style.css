@@ -1,7 +1,37 @@
 body {
     background-color: #212e37;
+    visibility: hidden;
 }
 
+/* loader */
+.loader {
+    visibility: hidden;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #2b3743;;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+  }
 
 
 nav {
@@ -95,6 +125,7 @@ nav {
     text-align: center;
     border-radius: 7px;
     width: 45%;
+    cursor: pointer;
 }
 
 .back {
